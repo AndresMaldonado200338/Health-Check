@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "express": "^4.21.0"
+  },
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "backend of the service",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch index.js"
+  },
+  "keywords": [
+    "backend"
+  ],
+  "author": "Andress, WilliamC, EstebanP",
+  "license": "ISC"
+}
