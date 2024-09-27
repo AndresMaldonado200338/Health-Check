@@ -5,9 +5,9 @@ const PORT = process.env.PORT || 5000;
 
 app.get('/health-check', (req, res) => {
     try {
-        res.status(200).send('Instance is running');
+        res.status(200).json({ status: 'OK', date: new Date() });
     } catch (error) {
-        res.status(500).send(error.message);
+        res.status(500).json({ status: 'ERROR' , error: error.message });
     }
 });
 
