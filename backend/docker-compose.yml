@@ -1,0 +1,17 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "${PORT}:${PORT}"
+    environment:
+      - PORT=${PORT}
+      - INSTANCE_ID=${INSTANCE_ID}
+    networks:
+      - middleware_app-network # Cambia el nombre de la red para que coincida
+
+networks:
+  middleware_app-network:
+    # Asegúrate de que la red coincida con la del otro archivo
+    external: true
